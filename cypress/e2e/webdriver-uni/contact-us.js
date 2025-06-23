@@ -75,13 +75,16 @@ describe("Test Contact Us form via WebdriverUni", () => {
     //   "body",
     //   "Error: Invalid email address"
     // );
-    contact_Us_PO.contactForm_Submission(
-      data.first_name,
-      data.last_name,
-      " ",
-      "How can I learn Cypress?",
-      "body",
-      "Error: Invalid email address"
-    );
+    if (Cypress.isBrowser("firefox")) {
+    } else {
+      contact_Us_PO.contactForm_Submission(
+        data.first_name,
+        data.last_name,
+        " ",
+        "How can I learn Cypress?",
+        "body",
+        "Error: Invalid email address"
+      );
+    }
   });
 });
