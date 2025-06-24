@@ -14,7 +14,7 @@ pipeline {
                         git url: 'https://github.com/LyuboPetrov94/CypressCourseUdemy'
                         sh 'npm install'
                         sh 'npm update'
-                        sh 'npm run triggerAllTests-autostore-dashboard-parallel'
+                        sh 'npm run triggerAllTests-autostore-dashboard-parallel-chromeHeaded'
                     }
                 }
                 stage('Slave Node2') {
@@ -25,7 +25,7 @@ pipeline {
                         git url: 'https://github.com/LyuboPetrov94/CypressCourseUdemy'
                         sh 'npm install'
                         sh 'npm update'
-                        sh 'npm run triggerAllTests-autostore-dashboard-parallel'
+                        sh 'npm run triggerAllTests-autostore-dashboard-parallel-chromeHeaded'
                     }
                 }
             }
