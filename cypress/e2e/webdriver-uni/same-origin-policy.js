@@ -1,7 +1,7 @@
 /// <reference types="cypress" />
 
-describe("Cypress web security", () => {
-  it.skip("Validate visiting two different domains", () => {
+describe.skip("Cypress web security", () => {
+  it("Validate visiting two different domains", () => {
     cy.visit("http://www.webdriveruniversity.com/");
     cy.visit("https://www.google.com");
   });
