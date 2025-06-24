@@ -16,6 +16,7 @@
     "triggerAllTests-webdriveruni": "npx cypress run --spec cypress/e2e/webdriver-uni/*",
     "triggerAllTests-autostore": "npx cypress run --spec cypress/e2e/automation-test-store/*",
     "triggerAllTests-autostore-dashboard": "npx cypress run --spec cypress/e2e/automation-test-store/* --record --key 6919e44f-e57d-4bda-a246-68b82d6c266b",
+    "triggerAllTests-autostore-dashboard-parallel": "npx cypress run --spec cypress/e2e/automation-test-store/* --record --key 6919e44f-e57d-4bda-a246-68b82d6c266b --parallel",
     "junit-merge": "npx junit-merge -d cypress/results/junit -o cypress/results/junit/results.xml",
     "delete-junit-report": "rm -rf cypress/results/junit/results.xml",
     "delete-results": "rm -rf cypress/results/* || true",
