@@ -14,7 +14,7 @@ function getConfigurationByFile(file) {
 }
 
 module.exports = defineConfig({
-  projectId: 'c9uyht',
+  projectId: "c9uyht",
   e2e: {
     setupNodeEvents(on, config) {
       // implement node event listeners here
@@ -23,7 +23,7 @@ module.exports = defineConfig({
       return getConfigurationByFile(file);
     },
     specPattern: "cypress/e2e/**/*.{js,jsx,ts,tsx,feature}",
-    excludeSpecPattern: "cypress/e2e/other/*.js",
+    //excludeSpecPattern: "cypress/e2e/other/*.js",
     baseUrl: "http://www.webdriveruniversity.com",
     chromeWebSecurity: false,
     experimentalSessionAndOrigin: true,
@@ -33,10 +33,6 @@ module.exports = defineConfig({
     trashAssetsBeforeRuns: true,
     video: false,
     videoUploadOnPasses: false,
-    env: {
-      first_name: "Sarah",
-      webdriveruni_homepage: "http://www.webdriveruniversity.com",
-    },
     viewportHeight: 1080,
     viewportWidth: 1920,
     reporter: "cypress-multi-reporters",
@@ -46,6 +42,10 @@ module.exports = defineConfig({
     retries: {
       runMode: 0,
       openMode: 1,
+    },
+    env: {
+      first_name: "Sarah",
+      webdriveruni_homepage: "http://www.webdriveruniversity.com",
     },
   },
 });
